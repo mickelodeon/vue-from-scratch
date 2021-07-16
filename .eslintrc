@@ -1,0 +1,74 @@
+{
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:vue/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "import"
+  ],
+  "env": {
+    "jest": true,
+    "es6": true,
+    "amd": true,
+    "commonjs": true,
+    "browser": true
+  },
+  "rules": {
+    "eqeqeq": 2,
+    "babel/no-invalid-this": 0,
+    "import/no-anonymous-default-export": 0,
+    "import/no-unresolved": [
+      2,
+      {
+        "commonjs": true,
+        "amd": true
+      }
+    ],
+    "no-alert": 0,
+    "no-console": 0,
+    "node/shebang": 0,
+    "no-unused-expressions": 2,
+    "no-unused-vars": 2,
+    "no-new": 1,
+    "prefer-template": 1,
+    "no-useless-escape": 1,
+    "vue/max-attributes-per-line": [
+      2,
+      {
+        "singleline": 10,
+        "multiline": {
+          "max": 1,
+          "allowFirstLine": false
+        }
+      }
+    ],
+    "vue/html-self-closing": [
+      "error",
+      {
+        "html": {
+          "void": "always",
+          "normal": "never"
+        }
+      }
+    ],
+    "vue/html-indent": [
+      "error",
+      2,
+      {
+        "alignAttributesVertically": false
+      }
+    ]
+  },
+  "globals": {
+    "document": true,
+    "window": true,
+    "theme": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  }
+}
